@@ -32,8 +32,10 @@ function Login({ onLogin }) {
       
 
       {/* Форма входа */}
+      
       <div className="login-box">
       <LoginAnimation />
+      
         {error && <p className="error-message">{error}</p>}
         <form onSubmit={handleSubmit}>
           
@@ -44,6 +46,7 @@ function Login({ onLogin }) {
             onChange={(e) => setEmail(e.target.value)}
             required
           />
+          
           <input
             type="password"
             placeholder="Пароль"
@@ -51,6 +54,7 @@ function Login({ onLogin }) {
             onChange={(e) => setPassword(e.target.value)}
             required
           />
+          
           <button type="submit">Увійти</button>
          
         </form>
@@ -58,8 +62,13 @@ function Login({ onLogin }) {
         <SecondAnimation />
         </div>
         
-      
+        
+    <div>
+    
+    
     </div>
+    </div>
+    
   );
 }
 
