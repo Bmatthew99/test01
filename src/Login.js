@@ -55,6 +55,7 @@ function Login({ onLogin }) {
          
         </form>
         <SecondAnimation />
+        <SecondAnimation />
         </div>
         
       
