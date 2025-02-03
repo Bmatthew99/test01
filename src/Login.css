@@ -144,16 +144,25 @@ body {
 }
 
 .second-animation-container {
-    width: 500px; /* Ширина анимации */
-    height: 500px; /* Высота анимации */
+    scale: 200%;
+    
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 20px;
+    z-index: -1;
     
 }
 .second-animation-container {
     position: relative;
     top: -380px;  /* Сдвиг вниз */
-    left: 130px; /* Сдвиг вправо */
+    left: -50px; /* Сдвиг вправо */
+}
+
+
+.second-animation-containersecond {
+    position: relative;
+    top: 0px;  /* Сдвиг вниз */
+    left: 20px; /* Сдвиг вправо */
+    scale: 250%;
 }
