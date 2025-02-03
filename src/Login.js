@@ -2,6 +2,10 @@
 import React, { useState } from "react";
 import { auth } from "./firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
+import "./Login.css"; // Добавляем стили
+import LoginAnimation from "./LoginAnimation";
+import SecondAnimation from "./SecondAnimation"; // Импорт второй анимации
+
 
 function Login({ onLogin }) {
   const [email, setEmail] = useState("");
@@ -23,28 +27,40 @@ function Login({ onLogin }) {
   };
 
   return (
-    <div>
-      <h2>Вхід</h2>
-      {error && <p style={{ color: "red" }}>{error}</p>}
-      <form onSubmit={handleSubmit}>
-        <input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <br />
-        <input
-          type="password"
-          placeholder="Пароль"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <br />
-        <button type="submit">Увійти</button>
-      </form>
+    
+    <div className="login-container">
+      
+
+      {/* Форма входа */}
+      <div className="login-box">
+      <LoginAnimation />
+        {error && <p className="error-message">{error}</p>}
+        <form onSubmit={handleSubmit}>
+          
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Пароль"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit">Увійти</button>
+         
+        </form>
+        <SecondAnimation />
+        </div>
+        
+      
     </div>
   );
 }
+
 
 export default Login;
