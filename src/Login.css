@@ -9,6 +9,7 @@ body {
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
+    
 }
 
 /* Контейнер формы – центрирование */
@@ -17,27 +18,46 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    
+    
 }
 
-/* Карточка с формой */
+
+
+
 .login-box {
-    background: rgb(250, 250, 250);
-    padding: 30px;
+    
+    backdrop-filter: blur(10px);
+    background: rgb(243, 243, 243);
+    padding: 50px;
     border: 1px solid #b3b3b3; 
     border-radius: 20px;
     text-align: center;
+    overflow: hidden;
+
     width: 290px;
     height: 270px;
     animation: fadeIn 0.5s ease-in-out;
     display: flex;
     flex-direction: column;
     align-items: center; /* Центрирование элементов */
+   
+    z-index: 0;
+    
+}
+.login-box {
+    top: -50px;
+    left: 50px;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
 }
 
 
 
 /* Заголовок "Вхід" */
 .login-box h2 {
+    backdrop-filter: 50px;
     font-size: 22px;
     font-weight: 500;
     color: #000;
@@ -47,6 +67,7 @@ body {
 /* Поля ввода */
 .login-box input {
     background-color: #f1f1f1;
+    
     width: 100%;
     padding: 15px;
     margin: 8px 0;
@@ -56,10 +77,12 @@ body {
     outline: none;
     transition: border 0.2s ease-in-out;
     box-sizing: border-box;
+    opacity: 60%;
 }
 .login-box input:hover {
-    background-color: #ebebeb;
+    background-color: #ffffff;
     transition: 1s;
+    opacity: 100%;
 }
 
 .login-box input:focus {
@@ -119,6 +142,7 @@ body {
     align-items: center; /* Центрируем содержимое */
     justify-content: center;
     height: 100vh;
+    z-index: -20;
 }
 
 
@@ -126,22 +150,26 @@ body {
 .login-animation-container {
     width: 80px; /* Размер анимации */
     height: 80px;
-    
+    filter: hue-rotate(90deg);
     justify-content: center;
     align-items: center;
     margin: 0px;
+    z-index: 0;
+    overflow: visible;
+    filter: invert(1);
+    opacity: 20%;
+    
+    
 }
 .login-animation-container {
     position: relative;
-    top: 0px;  /* Сдвиг вниз */
+    top: -15px;  /* Сдвиг вниз */
     left: 0px; /* Сдвиг вправо */
+    z-index: -20;
+    
+    
 }
 
-.login-animation-container {
-    filter: invert(1);
-    mix-blend-mode: multiply;
-    opacity: 15%;
-}
 
 .second-animation-container {
     scale: 200%;
@@ -150,19 +178,32 @@ body {
     justify-content: center;
     align-items: center;
     margin-top: 20px;
-    z-index: -1;
+    z-index: -10px;
+   
     
 }
 .second-animation-container {
+    
     position: relative;
     top: -380px;  /* Сдвиг вниз */
     left: -50px; /* Сдвиг вправо */
+    z-index: -20;
+    
+    
 }
 
 
 .second-animation-containersecond {
+    
     position: relative;
     top: 0px;  /* Сдвиг вниз */
     left: 20px; /* Сдвиг вправо */
     scale: 250%;
+    z-index: -20;
+    overflow: visible;
+    
+
+    
 }
+
+
