@@ -1,3 +1,5 @@
 node_modules
 build
+service-account.json
+temp-service-account.json
 .env
