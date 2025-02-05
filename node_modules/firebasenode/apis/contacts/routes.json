@@ -1,0 +1,30 @@
+[
+    {
+        "path": "/",
+        "method": "get",
+        "action": "contacts.fetchAll",
+        "secure": true,
+        "enabled": true
+    },
+    {
+        "path": "/",
+        "method": "post",
+        "action": "contacts.add",
+        "secure": true,
+        "enabled": true
+    },
+    {
+        "path": "/:id",
+        "method": "put",
+        "action": "contacts.uploadImage",
+        "secure": true,
+        "enabled": true
+    },
+    {
+        "path": "/:id",
+        "method": "delete",
+        "action": "contacts.delete",
+        "secure": true,
+        "enabled": true
+    }
+]

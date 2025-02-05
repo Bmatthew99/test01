@@ -1,0 +1,23 @@
+[
+    {
+        "path": "/register",
+        "method": "post",
+        "action": "users.register",
+        "secure": false,
+        "enabled": true
+    },
+    {
+        "path": "login",
+        "method": "post",
+        "action": "users.login",
+        "secure": false,
+        "enabled": true
+    },
+    {
+        "path": "/",
+        "method": "get",
+        "action": "users.test",
+        "secure": false,
+        "enabled": true
+    }
+]
