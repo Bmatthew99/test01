@@ -9,12 +9,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: npm ci && npm run build
-
       - name: Set up Firebase authentication
         run: |
           echo '${{ secrets.FIREBASE_SERVICE_ACCOUNT_ORDERSAPP_82D1C }}' > "$HOME/service-account.json"
           echo "GOOGLE_APPLICATION_CREDENTIALS=$HOME/service-account.json" >> $GITHUB_ENV
-
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
