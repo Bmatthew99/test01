@@ -1,21 +1,14 @@
-name: Deploy to Firebase Hosting on merge
-on:
-  push:
-    branches:
-      - master
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - run: npm ci && npm run build
       - name: Set up Firebase authentication
         run: |
-          echo '${{ secrets.FIREBASE_SERVICE_ACCOUNT_ORDERSAPP_82D1C }}' > "$HOME/service-account.json"
+          echo "${{ secrets.FIREBASE_SERVICE_ACCOUNT }}" > "$HOME/service-account.json"
           echo "GOOGLE_APPLICATION_CREDENTIALS=$HOME/service-account.json" >> $GITHUB_ENV
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
-          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_ORDERSAPP_82D1C }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
           channelId: live
           projectId: ordersapp-82d1c
