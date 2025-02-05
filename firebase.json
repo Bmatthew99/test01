@@ -1,12 +1,8 @@
 {
   "hosting": {
-    "site": "ordersapp-82d1c",
+    "site": "babak-work",
     "public": "build",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "rewrites": [
       {
         "source": "**",

@@ -1,4 +1,20 @@
 {
+  "projects": {
+    "default": "ordersapp-82d1c"
+  },
+  "targets": {
+    "ordersapp-82d1c": {
+      "hosting": {
+        "mysite": [
+          "babak.work"
+        ],
+        "babak-site": [
+          "babak-work"
+        ]
+      }
+    }
+  },
+  "etags": {},
   "hosting": {
     "public": "public",
     "ignore": [
@@ -6,8 +22,5 @@
       "**/.*",
       "**/node_modules/**"
     ]
-  },
-  "projects": {
-    "default": "ordersapp-82d1c"
   }
 }
