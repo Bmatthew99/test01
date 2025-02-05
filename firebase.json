@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "ordersapp-82d1c",
     "public": "build",
     "ignore": [
       "firebase.json",
